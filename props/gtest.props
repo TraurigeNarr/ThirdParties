@@ -6,7 +6,7 @@
     <IncludePath>$(THIRD_PARTIES_NEW)\gtest-1.7.0\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup>
-    <LibraryPath>$(THIRD_PARTIES_NEW)\gtest-1.7.0\msvc\gtest-md\$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(THIRD_PARTIES_NEW)\gtest-1.7.0\msvc\gtest-md\2012\$(Configuration);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>

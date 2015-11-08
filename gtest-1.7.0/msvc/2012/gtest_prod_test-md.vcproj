@@ -2,8 +2,8 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="7.10"
-	Name="gtest_prod_test"
-	ProjectGUID="{24848551-EF4F-47E8-9A9D-EA4D49BC3ECA}"
+	Name="gtest_prod_test-md"
+	ProjectGUID="{24848551-EF4F-47E8-9A9D-EA4D49BC3ECB}"
 	Keyword="Win32Proj">
 	<Platforms>
 		<Platform
@@ -22,7 +22,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="TRUE"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="5"
+				RuntimeLibrary="3"
 				UsePrecompiledHeader="3"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="FALSE"
@@ -67,7 +67,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
-				RuntimeLibrary="4"
+				RuntimeLibrary="2"
 				UsePrecompiledHeader="3"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="FALSE"
@@ -107,8 +107,8 @@
 	</Configurations>
 	<References>
 		<ProjectReference
-			ReferencedProjectIdentifier="{3AF54C8A-10BF-4332-9147-F68ED9862032}"
-			Name="gtest_main"/>
+			ReferencedProjectIdentifier="{3AF54C8A-10BF-4332-9147-F68ED9862033}"
+			Name="gtest_main-md"/>
 	</References>
 	<Files>
 		<Filter
@@ -116,7 +116,7 @@
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath="..\test\gtest_prod_test.cc">
+				RelativePath="..\..\test\gtest_prod_test.cc">
 				<FileConfiguration
 					Name="Debug|Win32">
 					<Tool
