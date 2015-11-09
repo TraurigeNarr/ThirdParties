@@ -3,10 +3,10 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>$(THIRD_PARTIES_NEW)\gmock-1.7.0\include;$(THIRD_PARTIES_NEW)gmock-1.7.0\gtest\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(THIRD_PARTIES_NEW)\googletest-master\googlemock\include;$(THIRD_PARTIES_NEW)gmock-1.7.0\gtest\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup>
-    <LibraryPath>$(THIRD_PARTIES_NEW)\gmock-1.7.0\msvc\2010\$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(THIRD_PARTIES_NEW)\googletest-master\googlemock\msvc\lib\2015\$(Configuration);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
