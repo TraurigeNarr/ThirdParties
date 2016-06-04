@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt" />
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\b5d6a322fb12d1be0d0ffb0c8209abcc\gtest-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\0d3b6e024e56b50073830f3f98cae482\gtest.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{4F8953E6-E408-3EC6-BA59-33FC5D8DFDA4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

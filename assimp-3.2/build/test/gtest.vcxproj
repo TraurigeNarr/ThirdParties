@@ -1,0 +1,1654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{3F342814-EB9A-33DE-94A8-CE8E049667D8}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>gtest</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\lib\Win\$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <OutDir>$(SolutionDir)..\lib\Win\$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\lib\Win\$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <OutDir>$(SolutionDir)..\lib\Win\$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Git_Projects\ThirdParties\assimp-3.2\build;E:\Git_Projects\ThirdParties\assimp-3.2\include;E:\Git_Projects\ThirdParties\assimp-3.2\code\BoostWorkaround;E:\Git_Projects\ThirdParties\assimp-3.2\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\contrib\zlib;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest\gtest\include;E:\Git_Projects\ThirdParties\assimp-3.2\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/Git_Projects/ThirdParties/assimp-3.2 -BE:/Git_Projects/ThirdParties/assimp-3.2/build --check-stamp-file E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/test/CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;E:\Git_Projects\ThirdParties\assimp-3.2\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\RepositoryInfo.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt.in;E:\Git_Projects\ThirdParties\assimp-3.2\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Creating directories for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Creating directories for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Creating directories for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Creating directories for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-mkdir.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing download step (git clone) for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing download step (git clone) for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (git clone) for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Performing download step (git clone) for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (git clone) for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-MinSizeRel.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-MinSizeRel.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Performing download step (git clone) for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (git clone) for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-RelWithDebInfo.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-download-RelWithDebInfo.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-download.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\gtest-gitinfo.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing update step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing update step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing update step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Performing update step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing update step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Performing update step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing update step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/tmp/gtest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-update.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No patch step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No patch step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No patch step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No patch step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-patch.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing configure step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing configure step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing configure step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing configure step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Performing configure step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing configure step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-MinSizeRel.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-MinSizeRel.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Performing configure step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing configure step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-RelWithDebInfo.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-configure-RelWithDebInfo.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-configure.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\tmp\gtest-cfgcmd.txt;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing build step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing build step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing build step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing build step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Performing build step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing build step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-MinSizeRel.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-MinSizeRel.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Performing build step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing build step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-RelWithDebInfo.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -Dconfig=$(Configuration) -P E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/gtest-build-RelWithDebInfo.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-build.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\ac611bf8d7920673921008db4aaf64a3\gtest-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">No install step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">No install step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">No install step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">No install step for 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-build
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/ac611bf8d7920673921008db4aaf64a3/gtest-install.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\b5d6a322fb12d1be0d0ffb0c8209abcc\gtest-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Completed 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Completed 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Completed 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Completed 'gtest'</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'gtest'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E make_directory E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/CMakeFiles/$(Configuration)/gtest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E touch E:/Git_Projects/ThirdParties/assimp-3.2/build/test/gtest/src/gtest-stamp/$(Configuration)/gtest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/b5d6a322fb12d1be0d0ffb0c8209abcc/gtest-complete.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-mkdir;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-download;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-update;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-patch;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-configure;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-build;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\gtest\src\gtest-stamp\$(Configuration)\gtest-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\CMakeFiles\0d3b6e024e56b50073830f3f98cae482\gtest.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Git_Projects/ThirdParties/assimp-3.2/build/CMakeFiles/0d3b6e024e56b50073830f3f98cae482/gtest.rule;E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\$(Configuration)\gtest-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Git_Projects\ThirdParties\assimp-3.2\build\test\CMakeFiles\gtest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/Git_Projects/ThirdParties/assimp-3.2/build/ZERO_CHECK.vcxproj">
+      <Project>40B940A7-5A68-3250-8832-BFF5892900CC</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
