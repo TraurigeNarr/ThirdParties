@@ -6,7 +6,7 @@
     <IncludePath>$(THIRD_PARTIES_NEW)\opengl\glew-1.10.0\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup>
-    <LibraryPath>$(THIRD_PARTIES_NEW)\opengl\glew-1.10.0\lib\$(Configuration)\Win32;$(THIRD_PARTIES_NEW)\opengl\glew-1.10.0\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(THIRD_PARTIES_NEW)\opengl\glew-1.10.0\lib\$(Configuration)\$(Platform);$(THIRD_PARTIES_NEW)\opengl\glew-1.10.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
  <ItemDefinitionGroup>
     <Link>
